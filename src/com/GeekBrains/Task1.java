@@ -1,12 +1,10 @@
 package com.GeekBrains;
 
-import java.util.Arrays;
-
 public class Task1 extends Thread{
     private static final int size=1000000;
     private static final int h=size/2;
     public void arrayCreation(){
-        int array[]=new int[size];
+        int[] array=new int[size];
         for (int i=0;i<array.length;i++){
             array[i]=1;
         }
@@ -18,7 +16,7 @@ public class Task1 extends Thread{
 
     }
     public void arrayCreation2(){
-        int array[]=new int[size];
+        int[] array=new int[size];
         for (int i=0;i<array.length;i++){
             array[i]=1;
         }
@@ -27,9 +25,7 @@ public class Task1 extends Thread{
         int[] right=new int[h];
         System.arraycopy(array,0,left,0,h);
         System.arraycopy(array,h,right,0,h);
-        /*System.out.println(Arrays.toString(left));
-        System.out.println(Arrays.toString(right));*/
-        int[]mergedArray=new int[size];
+        int[] mergedArray=new int[size];
         System.arraycopy(left, 0, mergedArray, 0, h);
         System.arraycopy(right, 0, mergedArray, h, h);
 
